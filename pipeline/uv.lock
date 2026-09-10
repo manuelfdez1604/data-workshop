@@ -1902,8 +1902,9 @@ wheels = [
 [[package]]
 name = "test"
 version = "0.1.0"
-source = { editable = "." }
+source = { virtual = "." }
 dependencies = [
+    { name = "click" },
     { name = "pandas" },
     { name = "psycopg2-binary" },
     { name = "pyarrow" },
@@ -1920,6 +1921,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
+    { name = "click", specifier = ">=8.5.0" },
     { name = "pandas", specifier = ">=3.0.5" },
     { name = "psycopg2-binary", specifier = ">=2.9.12" },
     { name = "pyarrow", specifier = ">=25.0.1" },
